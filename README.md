@@ -1,1 +1,1 @@
-# col786-project-
+# col786 projects and assignments

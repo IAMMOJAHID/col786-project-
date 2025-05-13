@@ -1,0 +1,8 @@
+output1/S01/1.cope1.nii.gz
+output1/S02/2.cope1.nii.gz
+output1/S03/3.cope1.nii.gz
+output1/S04/4.cope1.nii.gz
+output1/S05/5.cope1.nii.gz
+output1/S06/6.cope1.nii.gz
+output1/S07/7.cope1.nii.gz
+output1/S08/8.cope1.nii.gz

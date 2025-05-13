@@ -1,0 +1,4 @@
+../data/metadata/EV2_audio_left_hand.txt
+../data/metadata/EV3_audio_right_hand.txt
+../data/metadata/EV8_video_left_hand.txt
+../data/metadata/EV9_video_right_hand.txt

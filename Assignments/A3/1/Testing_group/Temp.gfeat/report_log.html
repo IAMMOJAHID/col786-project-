@@ -1,0 +1,651 @@
+<HTML><HEAD>
+<!--refreshstart-->
+
+<!--refreshstop-->
+<link REL=stylesheet TYPE=text/css href=.files/fsl.css>
+<TITLE>FSL</TITLE></HEAD><BODY><OBJECT data=report.html></OBJECT>
+<h2>Progress Report / Log</h2>
+Started at Sunday 23 March 2025 08:26:44 AM IST<p>
+Feat main script<br><pre>
+
+/bin/cp /tmp/feat_ajpfj1qo.fsf design.fsf
+
+/home/semrahd/fsl/bin/feat_model design
+
+mkdir .files;cp /home/semrahd/fsl/doc/fsl.css .files;cp -r /home/semrahd/fsl/doc/images .files/images
+
+/home/semrahd/fsl/bin/fsl_sub -T 60 -l logs -N feat2_pre   /home/semrahd/fsl/bin/feat /home/semrahd/Desktop/Mojahid_Assignments/A3/1/Testing_group/Temp.gfeat/design.fsf -D /home/semrahd/Desktop/Mojahid_Assignments/A3/1/Testing_group/Temp.gfeat -gfeatprep
+Error submitting job - invalid bareword "zstat1"
+in expression "1 + zstat1";
+should be "$zstat1" or "{zstat1}" or "zstat1(...)" or ...
+    while executing
+"if { [ catch {
+
+for { set argindex 1 } { $argindex < $argc } { incr argindex 1 } {
+    switch -- [ lindex $argv $argindex ] {
+
+	-I {
+	    incr arginde..."
+    (file "/home/semrahd/fsl/bin/feat" line 312)
+
+
+FATAL ERROR ENCOUNTERED:
+COMMAND:
+/home/semrahd/fsl/bin/fsl_sub -T 60 -l logs -N feat2_pre   /home/semrahd/fsl/bin/feat /home/semrahd/Desktop/Mojahid_Assignments/A3/1/Testing_group/Temp.gfeat/design.fsf -D /home/semrahd/Desktop/Mojahid_Assignments/A3/1/Testing_group/Temp.gfeat -gfeatprep
+ERROR MESSAGE:
+child process exited abnormally
+END OF ERROR MESSAGE
+</pre><hr>Higher-level input files preparation<br><pre>
+
+/home/semrahd/fsl/bin/featregapply /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S01/output++.feat
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in example_func -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S01/output++.feat/frgrot__oq6al_z -applyxfm -init reg/example_func2standard.mat -interp spline -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in mean_func -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S01/output++.feat/frgrot_boi40cdx -applyxfm -init reg/example_func2standard.mat -interp spline -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/cope1 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S01/output++.feat/frgrot_cwfit15e -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/cope2 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S01/output++.feat/frgrot_9gu6ng8a -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/cope3 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S01/output++.feat/frgrot_5w9dipjn -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/varcope1 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S01/output++.feat/frgrot_uf9k8vwj -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/varcope2 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S01/output++.feat/frgrot_b84gsy8x -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/varcope3 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S01/output++.feat/frgrot_fmxxkm1j -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in mask -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S01/output++.feat/frgrot_1v8uxx0j -applyxfm -init reg/example_func2standard.mat -interp nearestneighbour -datatype char
+
+
+/home/semrahd/fsl/bin/featregapply /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S02/output.feat
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in example_func -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S02/output.feat/frgrot_9an0btns -applyxfm -init reg/example_func2standard.mat -interp spline -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in mean_func -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S02/output.feat/frgrot_q1y8g4u0 -applyxfm -init reg/example_func2standard.mat -interp spline -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/cope1 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S02/output.feat/frgrot_c2dhuo83 -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/cope2 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S02/output.feat/frgrot_edn9j23r -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/cope3 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S02/output.feat/frgrot_81sxds99 -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/varcope1 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S02/output.feat/frgrot_y05epbjl -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/varcope2 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S02/output.feat/frgrot_il0lzfwq -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/varcope3 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S02/output.feat/frgrot_z04ac61k -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in mask -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S02/output.feat/frgrot_d8fzxd62 -applyxfm -init reg/example_func2standard.mat -interp nearestneighbour -datatype char
+
+
+/home/semrahd/fsl/bin/featregapply /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S03/output.feat
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in example_func -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S03/output.feat/frgrot_ay55_cg4 -applyxfm -init reg/example_func2standard.mat -interp spline -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in mean_func -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S03/output.feat/frgrot_valfq269 -applyxfm -init reg/example_func2standard.mat -interp spline -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/cope1 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S03/output.feat/frgrot_37dljbun -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/cope2 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S03/output.feat/frgrot_jg656yj0 -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/cope3 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S03/output.feat/frgrot_6us_vaca -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/varcope1 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S03/output.feat/frgrot_xmtwo0qx -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/varcope2 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S03/output.feat/frgrot_bv_dsgga -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/varcope3 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S03/output.feat/frgrot_h92e43st -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in mask -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S03/output.feat/frgrot_6fjir6l7 -applyxfm -init reg/example_func2standard.mat -interp nearestneighbour -datatype char
+
+
+/home/semrahd/fsl/bin/featregapply /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S04/output.feat
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in example_func -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S04/output.feat/frgrot_rarppz7s -applyxfm -init reg/example_func2standard.mat -interp spline -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in mean_func -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S04/output.feat/frgrot_vb8bqqj6 -applyxfm -init reg/example_func2standard.mat -interp spline -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/cope1 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S04/output.feat/frgrot_tx3ugts_ -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/cope2 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S04/output.feat/frgrot_c7i2twfd -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/cope3 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S04/output.feat/frgrot_rnkkpfna -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/varcope1 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S04/output.feat/frgrot_ipuuw5lx -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/varcope2 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S04/output.feat/frgrot_dlvsb6tt -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/varcope3 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S04/output.feat/frgrot_5jxv5ygr -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in mask -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S04/output.feat/frgrot_07nvzgi5 -applyxfm -init reg/example_func2standard.mat -interp nearestneighbour -datatype char
+
+
+/home/semrahd/fsl/bin/featregapply /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S05/output.feat
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in example_func -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S05/output.feat/frgrot_7x9p1yvb -applyxfm -init reg/example_func2standard.mat -interp spline -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in mean_func -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S05/output.feat/frgrot_rgzlb8fg -applyxfm -init reg/example_func2standard.mat -interp spline -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/cope1 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S05/output.feat/frgrot_4csovsfa -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/cope2 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S05/output.feat/frgrot_q81bmhfx -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/cope3 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S05/output.feat/frgrot_lk7mlg96 -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/varcope1 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S05/output.feat/frgrot_6hlj7ju8 -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/varcope2 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S05/output.feat/frgrot_fk07blpg -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/varcope3 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S05/output.feat/frgrot_1rncdkbu -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in mask -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S05/output.feat/frgrot_fozll1hz -applyxfm -init reg/example_func2standard.mat -interp nearestneighbour -datatype char
+
+
+/home/semrahd/fsl/bin/featregapply /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S06/output.feat
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in example_func -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S06/output.feat/frgrot_c64v740c -applyxfm -init reg/example_func2standard.mat -interp spline -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in mean_func -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S06/output.feat/frgrot_56fzcveu -applyxfm -init reg/example_func2standard.mat -interp spline -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/cope1 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S06/output.feat/frgrot_69uq1j7p -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/cope2 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S06/output.feat/frgrot_i10r5jg5 -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/cope3 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S06/output.feat/frgrot_tlrx92f5 -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/varcope1 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S06/output.feat/frgrot_zmg4aukq -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/varcope2 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S06/output.feat/frgrot_wmqxunfz -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/varcope3 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S06/output.feat/frgrot_a4inq2b8 -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in mask -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S06/output.feat/frgrot__ttyifim -applyxfm -init reg/example_func2standard.mat -interp nearestneighbour -datatype char
+
+
+/home/semrahd/fsl/bin/featregapply /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S07/output.feat
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in example_func -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S07/output.feat/frgrot_0kf3l7vg -applyxfm -init reg/example_func2standard.mat -interp spline -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in mean_func -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S07/output.feat/frgrot_qrkh7gpb -applyxfm -init reg/example_func2standard.mat -interp spline -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/cope1 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S07/output.feat/frgrot_40093h_y -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/cope2 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S07/output.feat/frgrot_ijdsl8i1 -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/cope3 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S07/output.feat/frgrot_ybgcirx9 -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/varcope1 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S07/output.feat/frgrot_dvgh3b8k -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/varcope2 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S07/output.feat/frgrot_e3t9snit -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/varcope3 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S07/output.feat/frgrot_takoexil -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in mask -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S07/output.feat/frgrot_7q74iuw8 -applyxfm -init reg/example_func2standard.mat -interp nearestneighbour -datatype char
+
+
+/home/semrahd/fsl/bin/featregapply /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S08/output.feat
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in example_func -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S08/output.feat/frgrot_7b_u52xo -applyxfm -init reg/example_func2standard.mat -interp spline -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in mean_func -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S08/output.feat/frgrot_gi2xrgnu -applyxfm -init reg/example_func2standard.mat -interp spline -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/cope1 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S08/output.feat/frgrot_y6aj3xpx -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/cope2 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S08/output.feat/frgrot_tqdr80qb -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/cope3 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S08/output.feat/frgrot_8dmbwkh4 -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/varcope1 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S08/output.feat/frgrot_j3dc4tpm -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/varcope2 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S08/output.feat/frgrot_vqiqhndh -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/varcope3 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S08/output.feat/frgrot_sp_70t2r -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in mask -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S08/output.feat/frgrot_gb4cik3w -applyxfm -init reg/example_func2standard.mat -interp nearestneighbour -datatype char
+
+
+/home/semrahd/fsl/bin/featregapply /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S09/output.feat
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in example_func -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S09/output.feat/frgrot_un5wy4wm -applyxfm -init reg/example_func2standard.mat -interp spline -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in mean_func -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S09/output.feat/frgrot_tnhaq2oh -applyxfm -init reg/example_func2standard.mat -interp spline -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/cope1 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S09/output.feat/frgrot_cvdv0gk0 -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/cope2 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S09/output.feat/frgrot_3_6wgcw7 -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/cope3 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S09/output.feat/frgrot_gc9l6_xa -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/varcope1 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S09/output.feat/frgrot_an6jkt2n -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/varcope2 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S09/output.feat/frgrot_sm3fmtpv -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/varcope3 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S09/output.feat/frgrot_xw3xc95h -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in mask -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S09/output.feat/frgrot_k7bpu3v4 -applyxfm -init reg/example_func2standard.mat -interp nearestneighbour -datatype char
+
+
+/home/semrahd/fsl/bin/featregapply /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S10/output.feat
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in example_func -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S10/output.feat/frgrot_hghqg8qv -applyxfm -init reg/example_func2standard.mat -interp spline -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in mean_func -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S10/output.feat/frgrot_bgx9wz8_ -applyxfm -init reg/example_func2standard.mat -interp spline -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/cope1 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S10/output.feat/frgrot_ryjxhmhw -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/cope2 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S10/output.feat/frgrot_edztsywd -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/cope3 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S10/output.feat/frgrot_r4yjcz_2 -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/varcope1 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S10/output.feat/frgrot_8dex66l5 -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/varcope2 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S10/output.feat/frgrot_ahn26kpr -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/varcope3 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S10/output.feat/frgrot_cy3lpww_ -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in mask -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S10/output.feat/frgrot_e8tedlku -applyxfm -init reg/example_func2standard.mat -interp nearestneighbour -datatype char
+
+
+/home/semrahd/fsl/bin/featregapply /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S11/output.feat
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in example_func -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S11/output.feat/frgrot_1xyiupx8 -applyxfm -init reg/example_func2standard.mat -interp spline -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in mean_func -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S11/output.feat/frgrot_cx_fgjfs -applyxfm -init reg/example_func2standard.mat -interp spline -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/cope1 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S11/output.feat/frgrot_x8jqm97l -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/cope2 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S11/output.feat/frgrot_fbb4l6hp -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/cope3 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S11/output.feat/frgrot_qdkezyos -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/varcope1 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S11/output.feat/frgrot_gyw0ml6x -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/varcope2 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S11/output.feat/frgrot_7xdwqobr -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/varcope3 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S11/output.feat/frgrot_n5posxjd -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in mask -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S11/output.feat/frgrot_bplkugc5 -applyxfm -init reg/example_func2standard.mat -interp nearestneighbour -datatype char
+
+
+/home/semrahd/fsl/bin/featregapply /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S11/output.feat
+
+/home/semrahd/fsl/bin/featregapply /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S12/output.feat
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in example_func -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S12/output.feat/frgrot_xlk1j_1i -applyxfm -init reg/example_func2standard.mat -interp spline -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in mean_func -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S12/output.feat/frgrot_05wiaazp -applyxfm -init reg/example_func2standard.mat -interp spline -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/cope1 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S12/output.feat/frgrot_yvltj_qt -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/cope2 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S12/output.feat/frgrot_1uhohnp7 -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/cope3 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S12/output.feat/frgrot__qkwsjkl -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/varcope1 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S12/output.feat/frgrot_dol8_dnp -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/varcope2 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S12/output.feat/frgrot_wwglcn2b -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/varcope3 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S12/output.feat/frgrot_mpr4nm38 -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in mask -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S12/output.feat/frgrot_3dq3tzrw -applyxfm -init reg/example_func2standard.mat -interp nearestneighbour -datatype char
+
+
+/home/semrahd/fsl/bin/featregapply /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S12/output.feat
+
+/home/semrahd/fsl/bin/featregapply /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S13/output.feat
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in example_func -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S13/output.feat/frgrot_dvgo7w2g -applyxfm -init reg/example_func2standard.mat -interp spline -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in mean_func -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S13/output.feat/frgrot_fv3k96tg -applyxfm -init reg/example_func2standard.mat -interp spline -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/cope1 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S13/output.feat/frgrot_e4wxl3gj -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/cope2 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S13/output.feat/frgrot_eu07owwg -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/cope3 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S13/output.feat/frgrot_a2enl4v4 -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/varcope1 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S13/output.feat/frgrot_bjzoyzz6 -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/varcope2 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S13/output.feat/frgrot_izjysv4a -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/varcope3 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S13/output.feat/frgrot_0yclfd8w -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in mask -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S13/output.feat/frgrot_fnd1bjoa -applyxfm -init reg/example_func2standard.mat -interp nearestneighbour -datatype char
+
+
+/home/semrahd/fsl/bin/featregapply /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S14/output.feat
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in example_func -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S14/output.feat/frgrot__nem_wij -applyxfm -init reg/example_func2standard.mat -interp spline -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in mean_func -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S14/output.feat/frgrot_kkxz3axi -applyxfm -init reg/example_func2standard.mat -interp spline -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/cope1 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S14/output.feat/frgrot_cxanq9_5 -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/cope2 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S14/output.feat/frgrot_uror88rs -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/cope3 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S14/output.feat/frgrot_15_rt60u -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/varcope1 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S14/output.feat/frgrot_l6957mn2 -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/varcope2 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S14/output.feat/frgrot_p9wxzb4n -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/varcope3 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S14/output.feat/frgrot_xgxazkaj -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in mask -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S14/output.feat/frgrot_sjd7lzr5 -applyxfm -init reg/example_func2standard.mat -interp nearestneighbour -datatype char
+
+
+/home/semrahd/fsl/bin/featregapply /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S15/output.feat
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in example_func -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S15/output.feat/frgrot_g_4ur9fr -applyxfm -init reg/example_func2standard.mat -interp spline -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in mean_func -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S15/output.feat/frgrot_n603qa3b -applyxfm -init reg/example_func2standard.mat -interp spline -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/cope1 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S15/output.feat/frgrot_ecc15rfi -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/cope2 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S15/output.feat/frgrot_vimgk_5w -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/cope3 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S15/output.feat/frgrot_061_fal_ -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/varcope1 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S15/output.feat/frgrot_xou0i46n -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/varcope2 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S15/output.feat/frgrot_tjs_8o9u -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/varcope3 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S15/output.feat/frgrot_bitvgr5w -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in mask -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S15/output.feat/frgrot_5evo7c1a -applyxfm -init reg/example_func2standard.mat -interp nearestneighbour -datatype char
+
+
+/home/semrahd/fsl/bin/featregapply /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S18/output.feat
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in example_func -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S18/output.feat/frgrot_losn2fpn -applyxfm -init reg/example_func2standard.mat -interp spline -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in mean_func -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S18/output.feat/frgrot__h6_xhdy -applyxfm -init reg/example_func2standard.mat -interp spline -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/cope1 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S18/output.feat/frgrot_kso6bo1a -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/cope2 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S18/output.feat/frgrot_k3t7n9o3 -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/cope3 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S18/output.feat/frgrot_4tb8i50x -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/varcope1 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S18/output.feat/frgrot_g3a14s9r -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/varcope2 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S18/output.feat/frgrot__nfryxg8 -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/varcope3 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S18/output.feat/frgrot__8d_fx_w -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in mask -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S18/output.feat/frgrot_yveawxrr -applyxfm -init reg/example_func2standard.mat -interp nearestneighbour -datatype char
+
+
+/home/semrahd/fsl/bin/featregapply /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S19/output.feat
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in example_func -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S19/output.feat/frgrot_nzg5luoq -applyxfm -init reg/example_func2standard.mat -interp spline -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in mean_func -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S19/output.feat/frgrot_yjv65rqb -applyxfm -init reg/example_func2standard.mat -interp spline -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/cope1 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S19/output.feat/frgrot_stz90xmu -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/cope2 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S19/output.feat/frgrot_rlwt3pdl -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/cope3 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S19/output.feat/frgrot_j4p1884h -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/varcope1 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S19/output.feat/frgrot_k5xwse1_ -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/varcope2 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S19/output.feat/frgrot_1md7mg2p -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/varcope3 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S19/output.feat/frgrot_pddpcz3t -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in mask -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S19/output.feat/frgrot__286v94i -applyxfm -init reg/example_func2standard.mat -interp nearestneighbour -datatype char
+
+
+/home/semrahd/fsl/bin/featregapply /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S20/output.feat
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in example_func -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S20/output.feat/frgrot_qx04_8wi -applyxfm -init reg/example_func2standard.mat -interp spline -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in mean_func -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S20/output.feat/frgrot_ls2ckqkn -applyxfm -init reg/example_func2standard.mat -interp spline -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/cope1 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S20/output.feat/frgrot__ph6xto2 -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/cope2 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S20/output.feat/frgrot_o1aleq_b -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/cope3 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S20/output.feat/frgrot_shq5t9hv -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/varcope1 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S20/output.feat/frgrot_kicu3j3h -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/varcope2 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S20/output.feat/frgrot_rm_oqpey -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in stats/varcope3 -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S20/output.feat/frgrot_eas5s934 -applyxfm -init reg/example_func2standard.mat -interp trilinear -datatype float
+
+
+/home/semrahd/fsl/bin/flirt -ref reg/standard -in mask -out /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S20/output.feat/frgrot_31vy4uqd -applyxfm -init reg/example_func2standard.mat -interp nearestneighbour -datatype char
+
+
+/home/semrahd/fsl/bin/fslmaths /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S01/output++.feat/reg/standard bg_image
+
+/home/semrahd/fsl/bin/fslmerge -t mask  /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S01/output++.feat/reg_standard/mask /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S02/output.feat/reg_standard/mask /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S03/output.feat/reg_standard/mask /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S04/output.feat/reg_standard/mask /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S05/output.feat/reg_standard/mask /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S06/output.feat/reg_standard/mask /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S07/output.feat/reg_standard/mask /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S08/output.feat/reg_standard/mask /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S09/output.feat/reg_standard/mask /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S10/output.feat/reg_standard/mask /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S11/output.feat/reg_standard/mask /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S11/output.feat/reg_standard/mask /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S12/output.feat/reg_standard/mask /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S12/output.feat/reg_standard/mask /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S13/output.feat/reg_standard/mask /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S14/output.feat/reg_standard/mask /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S15/output.feat/reg_standard/mask /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S18/output.feat/reg_standard/mask /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S19/output.feat/reg_standard/mask /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S20/output.feat/reg_standard/mask
+
+mkdir -p inputreg
+
+/home/semrahd/fsl/bin/fslmaths ../mask -mul 20 -Tmean masksum -odt short
+
+/home/semrahd/fsl/bin/fslmaths masksum -thr 20 -add masksum masksum
+
+/home/semrahd/fsl/bin/overlay 0 0 -c ../bg_image -a masksum 0.9 40 masksum_overlay
+
+/home/semrahd/fsl/bin/slicer masksum_overlay -S 2 750 masksum_overlay.png
+
+/home/semrahd/fsl/bin/fslmaths masksum -mul 0 maskunique
+
+/home/semrahd/fsl/bin/fslmaths /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S01/output++.feat/reg_standard/mask -mul -1 -add 1 -mul 1 -add maskunique maskunique
+
+/home/semrahd/fsl/bin/fslmaths /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S02/output.feat/reg_standard/mask -mul -1 -add 1 -mul 2 -add maskunique maskunique
+
+/home/semrahd/fsl/bin/fslmaths /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S03/output.feat/reg_standard/mask -mul -1 -add 1 -mul 3 -add maskunique maskunique
+
+/home/semrahd/fsl/bin/fslmaths /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S04/output.feat/reg_standard/mask -mul -1 -add 1 -mul 4 -add maskunique maskunique
+
+/home/semrahd/fsl/bin/fslmaths /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S05/output.feat/reg_standard/mask -mul -1 -add 1 -mul 5 -add maskunique maskunique
+
+/home/semrahd/fsl/bin/fslmaths /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S06/output.feat/reg_standard/mask -mul -1 -add 1 -mul 6 -add maskunique maskunique
+
+/home/semrahd/fsl/bin/fslmaths /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S07/output.feat/reg_standard/mask -mul -1 -add 1 -mul 7 -add maskunique maskunique
+
+/home/semrahd/fsl/bin/fslmaths /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S08/output.feat/reg_standard/mask -mul -1 -add 1 -mul 8 -add maskunique maskunique
+
+/home/semrahd/fsl/bin/fslmaths /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S09/output.feat/reg_standard/mask -mul -1 -add 1 -mul 9 -add maskunique maskunique
+
+/home/semrahd/fsl/bin/fslmaths /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S10/output.feat/reg_standard/mask -mul -1 -add 1 -mul 10 -add maskunique maskunique
+
+/home/semrahd/fsl/bin/fslmaths /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S11/output.feat/reg_standard/mask -mul -1 -add 1 -mul 11 -add maskunique maskunique
+
+/home/semrahd/fsl/bin/fslmaths /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S11/output.feat/reg_standard/mask -mul -1 -add 1 -mul 12 -add maskunique maskunique
+
+/home/semrahd/fsl/bin/fslmaths /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S12/output.feat/reg_standard/mask -mul -1 -add 1 -mul 13 -add maskunique maskunique
+
+/home/semrahd/fsl/bin/fslmaths /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S12/output.feat/reg_standard/mask -mul -1 -add 1 -mul 14 -add maskunique maskunique
+
+/home/semrahd/fsl/bin/fslmaths /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S13/output.feat/reg_standard/mask -mul -1 -add 1 -mul 15 -add maskunique maskunique
+
+/home/semrahd/fsl/bin/fslmaths /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S14/output.feat/reg_standard/mask -mul -1 -add 1 -mul 16 -add maskunique maskunique
+
+/home/semrahd/fsl/bin/fslmaths /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S15/output.feat/reg_standard/mask -mul -1 -add 1 -mul 17 -add maskunique maskunique
+
+/home/semrahd/fsl/bin/fslmaths /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S18/output.feat/reg_standard/mask -mul -1 -add 1 -mul 18 -add maskunique maskunique
+
+/home/semrahd/fsl/bin/fslmaths /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S19/output.feat/reg_standard/mask -mul -1 -add 1 -mul 19 -add maskunique maskunique
+
+/home/semrahd/fsl/bin/fslmaths /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S20/output.feat/reg_standard/mask -mul -1 -add 1 -mul 20 -add maskunique maskunique
+
+/home/semrahd/fsl/bin/fslmaths masksum -thr 19 -uthr 19 -bin -mul maskunique maskunique
+
+/home/semrahd/fsl/bin/overlay 0 0 ../bg_image -a maskunique 0.9 20 maskunique_overlay
+
+/home/semrahd/fsl/bin/slicer maskunique_overlay -S 2 750 maskunique_overlay.png
+
+/bin/cp /home/semrahd/fsl/etc/luts/ramp.gif .ramp.gif
+
+/home/semrahd/fsl/bin/fslmaths mask -Tmin mask
+
+/home/semrahd/fsl/bin/fslmerge -t mean_func  /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S01/output++.feat/reg_standard/mean_func /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S02/output.feat/reg_standard/mean_func /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S03/output.feat/reg_standard/mean_func /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S04/output.feat/reg_standard/mean_func /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S05/output.feat/reg_standard/mean_func /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S06/output.feat/reg_standard/mean_func /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S07/output.feat/reg_standard/mean_func /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S08/output.feat/reg_standard/mean_func /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S09/output.feat/reg_standard/mean_func /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S10/output.feat/reg_standard/mean_func /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S11/output.feat/reg_standard/mean_func /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S11/output.feat/reg_standard/mean_func /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S12/output.feat/reg_standard/mean_func /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S12/output.feat/reg_standard/mean_func /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S13/output.feat/reg_standard/mean_func /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S14/output.feat/reg_standard/mean_func /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S15/output.feat/reg_standard/mean_func /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S18/output.feat/reg_standard/mean_func /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S19/output.feat/reg_standard/mean_func /home/semrahd/Desktop/Mojahid_Assignments/A3/1/output/S20/output.feat/reg_standard/mean_func
+
+/home/semrahd/fsl/bin/fslmaths mean_func -Tmean mean_func
+invalid bareword "zstat1"
+in expression "1 + zstat1";
+should be "$zstat1" or "{zstat1}" or "zstat1(...)" or ...
+    while executing
+"if { [ catch {
+
+for { set argindex 1 } { $argindex < $argc } { incr argindex 1 } {
+    switch -- [ lindex $argv $argindex ] {
+
+	-I {
+	    incr arginde..."
+    (file "/home/semrahd/fsl/bin/feat" line 312)
+Error encountered while running in main feat script, halting.
+invalid bareword "zstat1"
+in expression "1 + zstat1";
+should be "$zstat1" or "{zstat1}" or "zstat1(...)" or ...
+</pre><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></BODY></HTML>
